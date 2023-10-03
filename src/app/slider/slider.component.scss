@@ -1,0 +1,22 @@
+.scroll-container {
+    width: 100vw; /* Set the desired width of your container */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+    margin-left: 8px; /* Prevent content from wrapping to the next line */
+  }
+  
+  .scroll-item {
+    display: inline-block; /* Make the items display in a row */
+    width: 332px; /* Set the width of each item */
+    margin-right: 10px; /* Adjust the spacing between items */ /* Add borders or styling as needed */
+    padding: 10px;
+    height: 208px; /* Add padding to the items */
+  }
+  img{
+    border: 3px solid transparent;
+    transition: all 0.2s;
+}  
+  img:hover{
+    border: 3px solid white;
+   
+}  

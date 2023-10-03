@@ -1,0 +1,84 @@
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+
+#vertical{
+  img:hover{
+      transform: scale(0.8);
+      transition: all 0.3s ;
+
+}
+}
+
+#horizontal{
+  img{
+    width: 320px;
+    height: 10vw;
+    border: 3px solid transparent;
+  }
+  img:hover{
+    border: 3px solid white;
+}  
+}
+
+.media-scroller {
+  margin-bottom: 5%;
+  img{
+    border-radius: 3px;
+    height: 30vw;
+    transition: all 0.3s ;
+    width: 320px;
+  }
+
+
+  --_spacer: var(--size-3);
+  display: grid;
+  gap: var(--_spacer);
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+
+  padding: 0 var(--_spacer) var(--_spacer);
+
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+}
+
+.media-scroller--with-groups {
+  grid-auto-columns: 80%;
+}
+
+
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: var(--_spacer, 1rem);
+}
+
+.snaps-inline > * {
+  scroll-snap-align: start;
+}
+
+/* general styling */
+
+.container {
+  margin-inline: auto;
+}
+
+.flow {
+  display: grid;
+
+}
+
+
+
+.page-title {
+  font-size: var(--font-size-fluid-3);
+}
+
+.page-subtitle {
+  font-size: var(--font-size-fluid-1);
+}
+
+.section-title {
+  padding-inline-start: var(--size-6);
+  margin-block: var(--size-9) var(--size-3);
+}
