@@ -1,68 +1,227 @@
 
 
-<h2 class="section-title">Vertical</h2>
-<div class="media-scroller snaps-inline" id="vertical">
-
-  <div class="media-element">
+<h2 class="section-title">Les plus populaires <span class="material-symbols-outlined">
+  groups
+  </span></h2>
+<div class="scroll-container" id="vertical">
+  <div class="scroll-item">
+    <span class="material-symbols-outlined">
+      add
+      </span>
     <img src="assets/47zazia/vertical (1).jpeg" alt="">
-    <p class="title">Bleu profond</p>
+    <button (click)="ajouterAuBackend({
+      nom: 'ABYSSE#2.2',
+      prix: 0,
+      collection: 'Mer profonde',
+      description: 'Acrylique sur toile (coton)\r\n55 x 46 cm'
+    })">Ajouter</button>
+    <p class="title">ABYSSE #2.2</p>
+    <ul>
+      <li>Acrylique sur toile(coton)</li>
+      <li>Taille: 55 x 46 cm</li>
+    <li id="sold"><p class="title" >VENDU</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
   </div>
-  <div class="media-element">
+  <div class="scroll-item">
     <img src="assets/47zazia/vertical (2).jpeg" alt="">
-    <p class="title">A longer title here</p>
+    <button (click)="ajouterAuBackend({   nom: 'POWER', description: 'Acrylique sur toile(coton)',prix: 496, collection: 'Lune'  })">Ajouter</button>
+    <p class="title">Power</p>
+    <ul>
+      <li>Acrylique sur toile(coton)</li>
+      <li>Taille: 55 x 46 cm</li>
+    <li><p class="title">496$</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
   </div>
-  <div class="media-element">
+  <div class="scroll-item">
     <img src="assets/47zazia/White Simple Phone Wallpaper (332 x 612 px)(1).png" alt="">
-    <p class="title">A longer title here</p>
+    <button (click)="ajouterAuBackend({
+      nom: 'TERRE BRULANTE',
+      prix: 1821,
+      collection: 'TERRE',
+      description: 'Techniques mixtes sur toile (coton)\r\n113 x 81 cm\r\nUn mur de pierre ardente, la terre\r\nbrûlante,\r\nL\'eau apaisante, si près, inaccessible.\r\nLa chaleur nous écrase, prison\r\nsuffocante,\r\nEt la terre se rit de notre tourment'
+    })">Ajouter</button>
+    <p class="title">Terre brulante</p>
+    <ul>
+      <li>Techniques mixtes(coton)</li>
+      <li>Taille: 113 x 81 cm</li>
+    <li><p class="title">1 821$</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
   </div>
-  <div class="media-element">
+  <div class="scroll-item">
     <img src="assets/47zazia/White Simple Phone Wallpaper (332 x 612 px).png" alt="">
-    <p class="title">A longer title here</p>
+    <button (click)="ajouterAuBackend({
+      nom: 'Danse',
+      prix: 603,
+      collection: 'TERRE',
+      description: 'Acrylique sur toile (lin)\r\n61x50 cm'
+    })">Ajouter</button>
+    <p class="title">Danse</p>
+    <ul>
+      <li>Acrylique sur toile (lin)</li>
+      <li>Taille: 61 x 50 cm</li>
+    <li><p class="title">603$</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
   </div>
-  <div class="media-element">
-    <img src="assets/47zazia/vertical (2).jpeg" alt="">
-    <p class="title">A longer title here</p>
+  <div class="scroll-item">
+    <img src="assets/47zazia/vertical_black.png" alt="">
+    <button (click)="ajouterAuBackend({
+      nom: 'ABYSSE #1',
+      prix: null,
+      collection: 'Mer profonde',
+      description: 'Technique mixtes sur toile en lin\r\n81x65 cm'
+    })">Ajouter</button>
+    <p class="title">ABYSSE #1</p>
+    <ul>
+      <li>Techniques mixtes(lin)</li>
+      <li>Taille: 81 x 65 cm</li>
+    <li id="sold"><p class="title">Vendu</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
+   
   </div>
-  <div class="media-element">
-    <img src="assets/47zazia/vertical (2).jpeg" alt="">
-    <p class="title">A longer title here</p>
+  <div class="scroll-item">
+    <img src="assets/47zazia/marbre.png" alt="">
+    <button (click)="ajouterAuBackend({ })">Ajouter</button>
+    <p class="title">Désert spéctral</p>
+    <ul>
+      <li>Techniques mixtes(coton)</li>
+      <li>Taille: 50 x 50 cm</li>
+    <li><p class="title">INCONNU $</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
   </div>
-  <div class="media-element">
-    <img src="assets/47zazia/IMG_2016.jpeg" alt="">
-    <p class="title">A longer title here</p>
+  <div class="scroll-item">
+    <img src="assets/47zazia/tropical.png" alt="">
+    <button (click)="ajouterAuBackend({ })">Ajouter</button>
+    <p class="title">Chutes</p>
+    <ul>
+      <li>Techniques mixtes(coton)</li>
+      <li>Taille: 73 x 60 cm</li>
+    <li><p class="title">750$</p></li>
+    </ul>
     <hr>
-    <p class="title">750$</p>
-  </div>
-  <div class="media-element">
-    <img src="assets/47zazia/IMG_2017.jpeg" alt="">
-    <p class="title">A longer title here</p>
-    <hr>
-    <p class="title">750$</p>
-  </div>
-  <div class="media-element">
-    <img src="assets/47zazia/vertical (2).jpeg" alt="">
-    <p class="title">A longer title here</p>
-    <hr>
-    <p class="title">750$</p>
-  </div>
-  <div class="media-element">
-    <img src="assets/47zazia/vertical (2).jpeg" alt="">
-    <p class="title">A longer title here</p>
-    <hr>
-    <p class="title">750$</p>
-  </div>
+    </div>
 </div>
-
-<h2 class="section-title">Horizontal</h2>
+<h2 class="section-title" >Coups de coeur <span class="material-symbols-outlined">
+  heart_plus
+  </span></h2>
+<div class="scroll-container" id="hor">
+    <div class="scroll-item" >
+        <img src="assets/47zazia/IMG_2013.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'ABYSSE#2.2',
+          prix: 0,
+          collection: 'Mer profonde',
+          description: 'Acrylique sur toile (coton)\r\n55 x 46 cm'
+        })">Ajouter</button>
+        <p class="title">ABYSSE #2.2</p>
+        <ul>
+          <li>Acrylique sur toile(coton)</li>
+          <li>Taille: 55 x 46 cm</li>
+        <li><p class="title" id="sold">VENDU</p></li>
+        </ul>
+        <hr>
+      </div>
+      <div class="scroll-item"> 
+        <img src="assets/47zazia/IMG_2023.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'Air de Terre',
+          prix: 703,
+          collection: 'TERRE',
+          description: 'Acrylique sur toile (lin)\r\n61 x 50 cm'
+        })">Ajouter</button>
+        <p class="title">AIR DE TERRE</p>
+        <ul>
+          <li>Acrylique sur toile(lin)</li>
+          <li>Taille: 61 x 50 cm</li>
+        <li><p class="title">703$</p></li>
+        </ul>
+        <hr>
+      </div>
+   
+      <div class="scroll-item">
+        <img src="assets/47zazia/IMG_2028.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'Danse',
+          prix: 603,
+          collection: 'TERRE',
+          description: 'Acrylique sur toile (lin)\r\n61x50 cm'
+        })">Ajouter</button>
+        <p class="title">DANSE</p>
+    <ul>
+      <li>Acrylique sur toile(coton)</li>
+      <li>Taille: 55 x 46 cm</li>
+    <li><p class="title">603$</p></li>
+    </ul>
+    <hr>
+      </div>
+      <div class="scroll-item">
+        <img src="assets/47zazia/IMG_0187.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'Clair de Lune',
+          prix: 218,
+          collection: 'Hors-série',
+          description: 'Acrylique sur toile 41 x 33 cm'
+        })">Ajouter</button>
+        <p class="title">Clair de Lune</p>
+        <ul>
+          <li>Acrylique sur toile(coton)</li>
+          <li>Taille: 55 x 46 cm</li>
+        <li><p class="title">218$ (à revoir)</p></li>
+        </ul>
+        <hr>
+      </div>
+      <div class="scroll-item">
+        <img src="assets/47zazia/IMG_1990.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'ABYSSE#2',
+          prix: 530,
+          collection: 'Mer Profonde',
+          description: 'Diptyque Acrylique sur toile (coton) 110 x 46 cm'
+        })">Ajouter</button>
+        <p class="title">ABYSSE #2</p>
+        <ul>
+          <li>Acrylique sur toile(coton)</li>
+          <li>Taille: 55 x 46 cm</li>
+        <li><p class="title">530$</p></li>
+        </ul>
+        <hr>
+      </div>
+      <div class="scroll-item">
+        <img src="assets/47zazia/IMG_1992.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'TERRE BRULANTE',
+          prix: 1821,
+          collection: 'TERRE',
+          description: 'Techniques mixtes sur toile (coton)\r\n113 x 81 cm\r\nUn mur de pierre ardente, la terre\r\nbrûlante,\r\nL\'eau apaisante, si près, inaccessible.\r\nLa chaleur nous écrase, prison\r\nsuffocante,\r\nEt la terre se rit de notre tourment'
+        })">Ajouter</button>
+        <p class="title">TERRE BRULANTE</p>
+        <ul>
+          <li>Acrylique sur toile(coton)</li>
+          <li>Taille: 55 x 46 cm</li>
+        <li><p class="title">1821$</p></li>
+        </ul>
+        <hr>
+      </div>
+      <div class="scroll-item">
+        <img src="assets/47zazia/IMG_2033.jpeg" alt="">
+        <button (click)="ajouterAuBackend({
+          nom: 'MARS',
+          prix: 218,
+          collection: 'TERRE',
+          description: 'Acrylique sur toile (lin)\r\n61x50 cm'
+        })">Ajouter</button>
+       
+        <p class="title">MARS</p>
+    <ul>
+      <li>Acrylique sur toile(lin)</li>
+      <li>Taille: 41 x 33 cm</li>
+    <li><p class="title">218$</p></li>
+    </ul>
+    <hr>
+      </div>
+  </div>

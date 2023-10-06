@@ -5,8 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { TestComponent } from './test/test.component';
-import { SliderComponent } from './slider/slider.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { PresentationComponent } from './presentation/presentation.component';
+import { TableauxComponent } from './tableaux/tableaux.component';
+import { HttpClientModule } from '@angular/common/http';
+import { TableauxInterfaceComponent } from './tableaux-interface/tableaux-interface.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -14,12 +18,16 @@ import { CarouselComponent } from './carousel/carousel.component';
     AppComponent,
     HomeComponent,
     TestComponent,
-    SliderComponent,
-    CarouselComponent
+    CarouselComponent,
+    PresentationComponent,
+    TableauxComponent,
+    TableauxInterfaceComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

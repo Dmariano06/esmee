@@ -3,77 +3,66 @@
 
 
 #vertical{
-  img:hover{
-      transform: scale(0.8);
-      transition: all 0.3s ;
+img{
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+img:hover{
+  transform: scale(0.8);
+  border: 2px solid white;
+  transition: all 0.3s;
+}
 
 }
-}
 
-#horizontal{
+.scroll-container {
+  width: 100vw; 
+  overflow-x: auto; 
+  white-space: nowrap;
+  margin-left: 8px; 
+}
+#hor{
   img{
-    width: 320px;
-    height: 10vw;
-    border: 3px solid transparent;
+    border: 2px solid transparent;
+    border-radius: 5px;
   }
   img:hover{
-    border: 3px solid white;
-}  
-}
-
-.media-scroller {
-  margin-bottom: 5%;
-  img{
-    border-radius: 3px;
-    height: 30vw;
-    transition: all 0.3s ;
-    width: 320px;
+    border: 2px solid white;
   }
-
-
-  --_spacer: var(--size-3);
-  display: grid;
-  gap: var(--_spacer);
-  grid-auto-flow: column;
-  grid-auto-columns: 21%;
-
-  padding: 0 var(--_spacer) var(--_spacer);
-
-  overflow-x: auto;
-  overscroll-behavior-inline: contain;
 }
-
-.media-scroller--with-groups {
-  grid-auto-columns: 80%;
+.title{
+  text-transform: uppercase;
 }
+.scroll-item {
+  button{
+    transition: all 0.3s;
+    background:#1c5377;
+    
+  }
+  button:hover{
+    transition: all 0.3s;
+    background:#0f2c3f;
 
-
-.snaps-inline {
-  scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(--_spacer, 1rem);
+  }
+  display: inline-block; 
+  width: 332px;
+  margin-right: 10px; 
+  padding: 10px;
+  #sold{
+    color:rgb(21, 153, 21)
+  }
+  
+  height: 208px; 
 }
-
-.snaps-inline > * {
-  scroll-snap-align: start;
-}
-
-/* general styling */
-
-.container {
-  margin-inline: auto;
-}
-
-.flow {
-  display: grid;
-
-}
-
-
-
 .page-title {
   font-size: var(--font-size-fluid-3);
 }
 
+span{
+  cursor: pointer;
+  font-size: 40px;
+
+}
 .page-subtitle {
   font-size: var(--font-size-fluid-1);
 }
@@ -81,4 +70,19 @@
 .section-title {
   padding-inline-start: var(--size-6);
   margin-block: var(--size-9) var(--size-3);
+}
+@media (max-width:1000px)
+{
+
+  .scroll-item{
+    height: 400px; 
+    width: 217px;
+  }
+  ul{
+    li{
+
+      font-size: 12px;
+      
+    }
+  }
 }
