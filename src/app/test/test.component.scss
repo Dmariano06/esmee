@@ -4,6 +4,7 @@
 
 #vertical{
 img{
+  cursor: pointer;
   border-radius: 3px;
   transition: all 0.3s;
 }
@@ -23,6 +24,7 @@ img:hover{
 }
 #hor{
   img{
+    cursor: pointer;
     border: 2px solid transparent;
     border-radius: 5px;
   }
@@ -82,7 +84,7 @@ span{
     li{
 
       font-size: 12px;
-      
+
     }
   }
 }
