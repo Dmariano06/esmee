@@ -9,7 +9,6 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { TableauxComponent } from './tableaux/tableaux.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TableauxInterfaceComponent } from './tableaux-interface/tableaux-interface.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 
@@ -20,8 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestComponent,
     CarouselComponent,
     PresentationComponent,
-    TableauxComponent,
-    TableauxInterfaceComponent
+    TableauxComponent
   ],
   imports: [
     BrowserModule,

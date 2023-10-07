@@ -8,7 +8,7 @@ import { Tableau } from './tableau';
 })
 export class TableauService {
 
-  private apiUrl = 'https://backend-web-service-8mf2.onrender.com/tableau'; // Assurez-vous que c'est l'URL correcte pour votre backend
+  private apiUrl = 'https://backend-web-service-8mf2.onrender.com/tableau';
 
   constructor(private http: HttpClient) { }
 
