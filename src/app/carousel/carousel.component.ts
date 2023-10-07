@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -8,7 +8,14 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
 export class CarouselComponent {
 
   constructor(private renderer: Renderer2, private el: ElementRef) {}
+  @ViewChild('#carousel')carousel: ElementRef | undefined;
+  @HostListener('mouseover') onMouseOver() {
+    this.carousel!.nativeElement.style.border = '2px solid white';
+  }
 
+  @HostListener('mouseout') onMouseOut() {
+    this.carousel!.nativeElement.style.border = 'none';
+  }
   ngAfterViewInit() {
     const video = this.el.nativeElement.querySelector('#my-video') as HTMLVideoElement;
     const video1 = this.el.nativeElement.querySelector('#my-video1') as HTMLVideoElement;
@@ -25,7 +32,7 @@ export class CarouselComponent {
       video.pause();
       video1.pause();
     }
-
+  
     // Au survol, démarrez la vidéo
     if (video) {
       video.addEventListener('mouseenter', () => {

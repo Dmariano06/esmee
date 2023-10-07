@@ -13,7 +13,7 @@ export class TableauxInterfaceComponent implements OnInit {
    
   tableaux: any = [];
  
-  tableauForm: FormGroup; // Pour le formulaire d'ajout/mise à jour
+  tableauForm: FormGroup; 
 
   constructor(private tableauService: TableauService, private fb: FormBuilder) {
     this.tableauForm = this.fb.group({

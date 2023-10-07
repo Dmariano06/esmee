@@ -1,4 +1,4 @@
-import { Component, Renderer2, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, Renderer2, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
