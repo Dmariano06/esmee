@@ -10,6 +10,7 @@ import { PresentationComponent } from './presentation/presentation.component';
 import { TableauxComponent } from './tableaux/tableaux.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CollectionsComponent } from './collections/collections.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     TestComponent,
     CarouselComponent,
     PresentationComponent,
-    TableauxComponent
+    TableauxComponent,
+    CollectionsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,31 @@
+body{
+    overflow: hidden;
+    background:#091924;
+    padding-top: 8vh;
+}
+.container-video{
+    display: flex;
+}
+
+video{
+   height: 50vh;
+   display: flex;
+    object-fit: cover;
+    border-radius: 30px;
+    width: 100%;
+    object-fit: cover;
+    margin-top: 0;
+    transition: all ease-in-out 0.3s;
+}
+video:hover{
+    transform: scale(1.1);
+    transition: all ease-in-out 0.3s;
+}
+@media(max-width: 1000px) {
+    .container-video{
+        display: block;
+    }
+   video{
+        height: 30vh;
+    }
+}
