@@ -2,24 +2,4 @@ body{
     background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
     color: white;
     overflow: hidden;
-@media (max-width:1000px){
-    .container{
-        video{
-    height: 80px !important;
-    width: 135px !important;
-        }
-    }
-    #container-fluid{
-        img{
-            width:134px !important;
-            height: 84px !important;
-        }
-    }
-    #vertical{
-        img{
-        width: 73px;
-        height: 134px;
-        }
-    }
-}
 }

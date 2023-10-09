@@ -13,12 +13,16 @@ table{
         color: white;
     }
 }
+img{
+    height: 620px;
+    width: 332px;
+}
 h1{
     padding-top: 5%;
     text-align: center;
 }
 body{
-    overflow: hidden;
+    overflow-x: hidden;
     color: white;
     background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
     height: 100vh;

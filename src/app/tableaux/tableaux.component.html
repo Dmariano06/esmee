@@ -6,15 +6,14 @@
       <th scope="col">Nom</th>
       <th scope="col">Description</th>
       <th scope="intecol">Prix</th>
-      <th scope="col">Collection</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <tr *ngFor="let tableau of tableaux">{{ tableau.nom }}
       <td> {{ tableau.description }}</td>
+      <img [src]="tableau.image" alt="">
       <td>{{ tableau.prix }} $</td>
-      <td> {{ tableau.collection }}</td>
       <td><button (click)="deleteTableau(tableau.id)">Supprimer</button></td>
       </tr>
   </tbody>
