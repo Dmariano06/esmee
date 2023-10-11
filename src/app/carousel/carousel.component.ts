@@ -1,4 +1,4 @@
-import { Component, ElementRef} from '@angular/core';
+import { Component, ElementRef, HostListener, Renderer2} from '@angular/core';
 
 @Component({
   selector: 'app-carousel',
@@ -8,29 +8,12 @@ import { Component, ElementRef} from '@angular/core';
 export class CarouselComponent {
 
   isHovered = false;
-  constructor(private el: ElementRef) {}
-  ngAfterViewInit() {
-    
-    const video = this.el.nativeElement.querySelector('#my-video') as HTMLVideoElement;
-    const video1 = this.el.nativeElement.querySelector('#my-video1') as HTMLVideoElement;
-    const video2 = this.el.nativeElement.querySelector('#my-video2') as HTMLVideoElement;
-    
-    function setupVideo(videoElement: HTMLVideoElement) {
-      if (videoElement) {
-        videoElement.muted = true;
-        videoElement.addEventListener('mouseenter', () => {
-          videoElement.play();
-        });
-    
-        videoElement.addEventListener('mouseleave', () => {
-          videoElement.pause();
-        });
-      }
-    }
-    
-    setupVideo(video);
-    setupVideo(video1);
-    setupVideo(video2);
-    }
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  @HostListener('click') scrollToBottom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth'
+    });
   }
 
+}

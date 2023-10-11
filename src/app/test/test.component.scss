@@ -10,7 +10,7 @@ img{
   
 }
 img:hover{
-  transform: scale(1.1);
+  transform: scale(1.030);
   transition: all 0.3s;
 }
 .scroll-container::-webkit-scrollbar {
@@ -35,7 +35,7 @@ img:hover{
   ul{
     list-style: none;
   }
-.material-symbols-outlined:hover {
+.heart:hover {
   cursor: pointer;
   color: rgba(197, 7, 0, 0.97);
   font-variation-settings:
@@ -45,7 +45,16 @@ img:hover{
   'opsz' 24
 }
 }
-.heart{
+.landscape{
+  color: brown;
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.moon{
+  color: purple;
   font-variation-settings:
   'FILL' 1,
   'wght' 400,
