@@ -1,9 +1,9 @@
 
 .carousel{
-
     margin: 5%;
     .carousel-inner{
         box-sizing: border-box;
+        border: 4px solid white;
         transition: all 0.1s;
         box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     }
@@ -26,7 +26,52 @@
     }
 }
 }
-
+p{
+    font-size: 24px;
+    margin: auto;
+    padding-top: 3%;
+}
+button{
+    background: #276e9e;
+    padding: 5px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+}
+button:hover{
+    background: #1a4b6b;
+    transition: all 0.3s ease-in-out;
+}
+.CI{
+    img{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.5) 0px -12px 30px, rgba(0, 0, 0, 0.4) 0px 4px 6px, rgba(0, 0, 0, 0.2) 0px 12px 13px, rgba(0, 0, 0, 0.3) 0px -3px 5px;
+        margin: auto;
+    }
+    img:hover{
+        box-shadow: none;
+    }
+    padding-top: 3%;
+   
+    display: flex;
+}
+ul{
+    list-style: none;
+}
+h1{
+    text-align: center;
+    margin: auto;
+    padding-top: 1.5%;
+    font-family:'Dancing script';
+    font-size: 54px;
+    color: #9da4ad;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+details{
+    background: transparent;
+    transition: all 2s ease-in-out;
+}
+summary{
+    color: #0d2535;
+}
  
   .dropdown{
     position: absolute;
@@ -57,7 +102,7 @@
         border:  solid 2px white;
         height: 8vw;
         transition: 0.5s ease-in-out;
-        filter: blur(4px);
+        filter: blur(2px);
         padding: 3px;
         margin: 3px;
     }
@@ -65,15 +110,6 @@
         filter: blur(0px);
         transition: 0.5s ease-in-out;
         }
-    .dropdown-menu{
-        overflow: auto;
-        height: 15vw;
-        width: 20vw;
-        background: rgba($color: rgb(187, 187, 187), $alpha: 0.8);
-    }
-    p{
-        text-align: end;
-    }
     
 }
 .sign{
@@ -96,10 +132,17 @@
     }
 }
 @media(max-width: 800px){
-
-    .video-container video{
-        filter: blur(0px) !important;
+    .sign{
+        width: 40px;
+        height: 25px;
     }
+.test{
+   img{
+    filter: blur(0px);
+    height: 10vw;
+    width: 10vw;
+   }
+}
    .test{
     h1{
         font-size: 25px;
