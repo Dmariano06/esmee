@@ -32,6 +32,7 @@ img:hover{
   'opsz' 24
 }
 .scroll-container{
+  
   ul{
     list-style: none;
   }
@@ -67,7 +68,12 @@ img:hover{
   overflow-y: hidden;
   overflow-x: auto;
   white-space: nowrap;
-  margin-left: 5%; 
+  padding: 3%; 
+}
+#vertical{
+  .scroll-item{
+    background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
+  }
 }
 #hor{
   img{
@@ -75,23 +81,25 @@ img:hover{
     border-radius: 5px;
     transition: all 0.3s;
   }
+ 
+  .scroll-item{
+    background-image: linear-gradient(to bottom, brown 0%, #000000 100%);
+    width: 642px;
+  }
+}
+#moon{
+  .scroll-item{
+    width: 600px;
+    background-image: linear-gradient(to bottom, purple 0%, #000000 100%);
+  }
 }
 .title{
   text-transform: uppercase;
   font-weight: bold;
 }
 .scroll-item {
-  border: 3px solid white;
-  button{
-    transition: all 0.3s;
-    background:#1c5377;
-    
-  }
-  button:hover{
-    transition: all 0.3s;
-    background:#0f2c3f;
-
-  }
+  border: 2px solid white;
+  background-size: cover;
   display: inline-block; 
   width: 332px;
   margin-right: 20px; 
@@ -99,7 +107,9 @@ img:hover{
   #sold{
     color:rgb(21, 153, 21)
   }
-  
+  hr{
+    border: 2px solid white;
+  }
 
 }
 .page-title {

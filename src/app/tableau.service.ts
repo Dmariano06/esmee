@@ -7,6 +7,9 @@ import { Tableau } from './tableau';
   providedIn: 'root'
 })
 export class TableauService {
+  getTableauById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${id}`);
+  }
 
   private apiUrl = 'https://backend-web-service-8mf2.onrender.com/tableau';
 

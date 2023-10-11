@@ -1,17 +1,7 @@
 <body>
-<div class="container-video">
-    <video id="my-video" autoplay loop muted>
-      <source src="assets/Desert1.mp4" type="video/mp4">
-      Votre navigateur ne prend pas en charge la lecture de vidéos.
-  </video>
-  <video id="my-video1" loop muted autoplay>
-    <source src="assets/Desert2.mp4" type="video/mp4">
-    Votre navigateur ne prend pas en charge la lecture de vidéos.
-</video>
-</div>
-
-  <video id="my-video2" loop muted autoplay>
-    <source src="../../assets/Desert3.mp4" type="video/mp4">
-    Votre navigateur ne prend pas en charge la lecture de vidéos.
-  </video>
+  <h2>{{ tableau.nom }}</h2>
+  <p>{{ tableau.description }}</p>
+  <div *ngFor="let image of tableau.images">
+    <img [src]="tableau.image" alt="{{ image.alt }}" />
+  </div>
   </body>
