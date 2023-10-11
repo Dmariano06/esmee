@@ -70,12 +70,22 @@ img:hover{
   white-space: nowrap;
   padding: 3%; 
 }
+button{
+  width: 100%;
+  background: #5092be;
+  border-radius:2px;
+  padding: 2%;
+  letter-spacing: 2px;
+}
 #vertical{
   .scroll-item{
     background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
   }
 }
 #hor{
+  button{
+    background: brown;
+  }
   img{
     cursor: pointer;
     border-radius: 5px;
@@ -83,12 +93,23 @@ img:hover{
   }
  
   .scroll-item{
+    border: 2px solid brown;
+    span{
+      color: brown;
+    }
     background-image: linear-gradient(to bottom, brown 0%, #000000 100%);
     width: 642px;
   }
 }
 #moon{
+  button{
+    background: purple;
+  }
+  span{
+    color: purple;
+  }
   .scroll-item{
+    border: 2px solid purple;
     width: 600px;
     background-image: linear-gradient(to bottom, purple 0%, #000000 100%);
   }
@@ -98,7 +119,7 @@ img:hover{
   font-weight: bold;
 }
 .scroll-item {
-  border: 2px solid white;
+  border: 2px solid rgb(16, 47, 68);
   background-size: cover;
   display: inline-block; 
   width: 332px;
