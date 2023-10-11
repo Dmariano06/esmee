@@ -103,21 +103,6 @@ span{
 .page-subtitle {
   font-size: var(--font-size-fluid-1);
 }
-
-@media (max-width:1000px)
-{
-  #vertical{
-.scroll-item{
-    height: 400px;
-    width: 217px;
-  }
-  ul{
-    li{
-      font-size: 12px;
-    }
-  }
-}
-}
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
