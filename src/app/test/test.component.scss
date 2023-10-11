@@ -10,10 +10,17 @@ img{
   
 }
 img:hover{
-  
   transform: scale(1.05);
   transition: all 0.3s;
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
+}
 
+/* Hide scrollbar for IE, Edge and Firefox */
+.scroll-container {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .material-symbols-outlined {
@@ -46,12 +53,12 @@ img:hover{
   'opsz' 24
 }
 
-
 .scroll-container {
   width: 100vw; 
-  overflow-x: auto; 
+  overflow-y: hidden;
+  overflow-x: auto;
   white-space: nowrap;
-  margin-left: 8px; 
+  margin-left: 5%; 
 }
 #hor{
   img{
@@ -99,16 +106,18 @@ span{
 
 @media (max-width:1000px)
 {
-
-  .scroll-item{
-    height: 400px; 
+  #vertical{
+.scroll-item{
+    height: 400px;
     width: 217px;
   }
   ul{
     li{
-
       font-size: 12px;
-
     }
   }
+}
+}
+.scroll-container::-webkit-scrollbar {
+  display: none;
 }

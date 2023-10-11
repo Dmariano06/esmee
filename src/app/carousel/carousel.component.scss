@@ -26,32 +26,8 @@
     }
 }
 }
-.video-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1200px; /* Ajustez selon vos besoins */
-    width: 100%;
-    margin: auto;
-    margin-top: 3%;
-  }
 
-  .video-container video {
-    border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    margin: 5px;
-    cursor: pointer;
-    width: 30%; /* Ajustez selon vos besoins */
-    aspect-ratio: 16/9;
-    filter: blur(0.8px);
-    transition: 0.4s all ease-in-out;/* Pour maintenir le rapport hauteur/largeur de l'iframe */
-  }
-
-  .video-container video:hover {
-    transform: scale(1.1);
-    filter: blur(0px);
-    box-shadow: none;
-    transition: 0.4s all ease-in-out;/* Pour maintenir le rapport hauteur/largeur de l'iframe */
-  }
+ 
   .dropdown{
     position: absolute;
     top: 2%;
@@ -59,6 +35,7 @@
 .test{
     h1{
         font-size: 42px;
+        color: black;
         font-weight: bold;
         font-family: 'Dancing Script', cursive;
     }

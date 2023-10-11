@@ -7,6 +7,7 @@ import { Component, ElementRef} from '@angular/core';
 })
 export class CarouselComponent {
 
+  isHovered = false;
   constructor(private el: ElementRef) {}
   ngAfterViewInit() {
     
