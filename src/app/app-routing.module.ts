@@ -7,9 +7,7 @@ import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path:"home", component: HomeComponent},
-  {path:"collections", component: CollectionsComponent},
   {path:"tableaux", component: TableauxComponent},
-  {path:"tableau/123", component: CollectionsComponent},
   {path: '', redirectTo:"home", pathMatch: 'full'}
 ];
 

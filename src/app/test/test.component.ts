@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import { TableauService } from '../tableau.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+//import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -12,7 +12,7 @@ export class TestComponent implements AfterViewInit {
   tableaux: any[] = [
   ];
 
-  private scrollSubscription: Subscription | undefined;
+ // private scrollSubscription: Subscription | undefined;
   private scrollTriggerThreshold = 200; // Modifier selon vos besoins
   private componentName = 'app-test'; // Nom du composant actuel
 
@@ -27,7 +27,7 @@ export class TestComponent implements AfterViewInit {
   }
 
   ngOnDestroy() {
-this.scrollSubscription!.unsubscribe();
+//this.scrollSubscription!.unsubscribe();
   }
   ngAfterViewInit() {
   

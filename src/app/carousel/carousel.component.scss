@@ -41,9 +41,7 @@ button:hover{
     background: #1a4b6b;
     transition: all 0.3s ease-in-out;
 }
-.presentation{
-    cursor: pointer;
-}
+
 .test{
     h1{
         font-size: 42px;
@@ -99,6 +97,11 @@ button:hover{
     }
 }
 @media(max-width: 800px){
+    .presentation{
+        p{
+        font-size: 18px;
+        }
+    }
     .sign{
         width: 40px;
         height: 25px;
