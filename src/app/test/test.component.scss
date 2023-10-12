@@ -75,7 +75,12 @@ button{
   background: #5092be;
   border-radius:2px;
   padding: 2%;
+  transition: all 0.3s ease-in-out;
   letter-spacing: 2px;
+}
+button:hover{
+  background: rgb(16, 47, 68) ;
+  transition: all 0.3s ease-in-out;
 }
 #vertical{
   .scroll-item{
@@ -85,6 +90,11 @@ button{
 #hor{
   button{
     background: brown;
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover{
+    background: rgb(88, 23, 23);
+    transition: all 0.3s ease-in-out;
   }
   img{
     cursor: pointer;
@@ -104,6 +114,11 @@ button{
 #moon{
   button{
     background: purple;
+    transition: all 0.3s ease-in-out;
+  }
+  button:hover{
+    background: rgb(78, 0, 78);
+    transition: all 0.3s ease-in-out;
   }
   span{
     color: purple;
