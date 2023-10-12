@@ -6,13 +6,10 @@
 img{
   cursor: pointer;
   border-radius: 3px;
-  transition: all 0.3s;
   
 }
-img:hover{
-  transform: scale(1.030);
-  transition: all 0.3s;
-}
+
+
 .scroll-container::-webkit-scrollbar {
   display: none;
 }
@@ -103,6 +100,7 @@ button:hover{
   }
  
   .scroll-item{
+    transition: all 0.3s;
     border: 2px solid brown;
     span{
       color: brown;
@@ -141,6 +139,7 @@ button:hover{
   width: 332px;
   margin-right: 20px; 
   padding: 10px;
+  transition: all 0.3s;
   #sold{
     color:rgb(21, 153, 21)
   }
@@ -148,6 +147,10 @@ button:hover{
     border: 2px solid white;
   }
 
+}
+.scroll-item:hover{
+  transform: scale(1.030);
+  transition: all 0.3s;
 }
 .page-title {
   font-size: var(--font-size-fluid-3);
