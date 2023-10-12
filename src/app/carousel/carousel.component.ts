@@ -7,13 +7,4 @@ import { Component, ElementRef, HostListener, Renderer2} from '@angular/core';
 })
 export class CarouselComponent {
 
-  isHovered = false;
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
-  @HostListener('click') scrollToBottom() {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: 'smooth'
-    });
-  }
-
 }
