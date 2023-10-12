@@ -81,7 +81,8 @@ button:hover{
 }
 #vertical{
   .scroll-item{
-    background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
+   // background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
+    background:transparent;
   }
 }
 #hor{
