@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Tableau } from './tableau';
 
@@ -10,7 +10,15 @@ export class TableauService {
   getTableauById(id: number): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${id}`);
   }
+  private scrollTrigger = new Subject<boolean>();
 
+  setScrollTrigger(trigger: boolean) {
+    this.scrollTrigger.next(trigger);
+  }
+
+  getScrollTrigger() {
+    return this.scrollTrigger.asObservable();
+  }
   private apiUrl = 'https://backend-web-service-8mf2.onrender.com/tableau';
 
   constructor(private http: HttpClient) { }
@@ -31,5 +39,14 @@ export class TableauService {
   deleteTableau(tableauId: number): Observable<any> {
     const url = `${this.apiUrl}/${tableauId}`;
     return this.http.delete<any>(url);
+  }
+  private scrollPosition = new Subject<number>();
+
+  setScrollPosition(position: number) {
+    this.scrollPosition.next(position);
+  }
+
+  getScrollPosition() {
+    return this.scrollPosition.asObservable();
   }
 }

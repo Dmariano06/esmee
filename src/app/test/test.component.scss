@@ -148,3 +148,17 @@ span{
   display: none;
 }
 
+
+@media(max-width: 1000px) {
+  #vertical{
+    .scroll-item{
+      height: 540px;
+      width: 293px;
+    }
+  }
+  #hor,#moon{
+    .scroll-item{
+    width: 332px;
+    }
+  }
+}

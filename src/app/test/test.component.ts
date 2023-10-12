@@ -1,6 +1,7 @@
-import { AfterViewInit, Component} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, HostListener, ViewChild} from '@angular/core';
 import { TableauService } from '../tableau.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-test',
@@ -11,7 +12,23 @@ export class TestComponent implements AfterViewInit {
   tableaux: any[] = [
   ];
 
+  private scrollSubscription: Subscription | undefined;
+  private scrollTriggerThreshold = 200; // Modifier selon vos besoins
+  private componentName = 'app-test'; // Nom du composant actuel
 
+
+  @ViewChild('targetDiv') targetDiv: ElementRef | undefined;
+
+  @HostListener('window:scroll', ['$event'])
+  onScroll(evenst: Event): void {
+    const targetDivPosition = this.targetDiv!.nativeElement.getBoundingClientRect().top;
+    const trigger = targetDivPosition <= this.scrollTriggerThreshold;
+    this.tableauService.setScrollTrigger(trigger);
+  }
+
+  ngOnDestroy() {
+this.scrollSubscription!.unsubscribe();
+  }
   ngAfterViewInit() {
   
     this.tableauService.getAllTableaux().subscribe(data => {
