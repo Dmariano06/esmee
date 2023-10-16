@@ -1,5 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component,OnInit} from '@angular/core';
 import { TableauService } from '../tableau.service';
+import { CollectionService } from '../collection.service';
+import { Tableau } from '../tableau';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -8,45 +11,108 @@ import { TableauService } from '../tableau.service';
   styleUrls: ['./tableaux.component.scss']
 })
 export class TableauxComponent implements OnInit {
-  
-  tableaux: any[] = [
-  ];
+  tableaux: any[] = [];
+  collections: any[] = [];
+  newCollectionForm: FormGroup;
+  newTableauForm: FormGroup;
+  updatedCollectionForm: FormGroup;
 
-  constructor(private tableauService: TableauService) { }
-ngOnInit() {
+  constructor(
+    private tableauService: TableauService,
+    private collectionService: CollectionService,
+    private formBuilder: FormBuilder
+  ) {
+    this.newCollectionForm = this.formBuilder.group({
+      nom: ['', Validators.required],
+      description: [''],
+    });
+
+    this.newTableauForm = this.formBuilder.group({
+      nom: ['', Validators.required],
+      description: [''],
+      prix: [0],
+      taille: [''],
+      image: [''],
+    });
+
+    this.updatedCollectionForm = this.formBuilder.group({
+      nom: [''],
+      description: [''],
+    });
+  }
+
+  ngOnInit() {
+    this.loadTableaux();
+    this.loadCollections();
+  }
+
+  loadTableaux() {
     this.tableauService.getAllTableaux().subscribe(data => {
       this.tableaux = data;
-      this.loadTableaux();
     });
-    
-}
-loadTableaux() {
-  this.tableauService.getAllTableaux().subscribe(data => {
-    this.tableaux = data;
-  });
-}
+  }
 
-deleteTableau(tableauId: number) {
-  this.tableauService.deleteTableau(tableauId).subscribe(() => {
-    this.loadTableaux();
-  });
-}
-@ViewChild('videoPlayer') videoPlayer!: ElementRef;
+  loadCollections() {
+    this.collectionService.getCollections().subscribe(collections => {
+      this.collections = collections;
+    });
+  }
 
-videos = [
-  { src: 'assets/Desert1.mp4', title: 'Video 1' },
-  { src: 'assets/Desert2.mp4', title: 'Video 2' },
-  { src: 'assets/Desert3.mp4', title: 'Video 3' }
-];
+  addCollection() {
+    this.collectionService.addCollection(this.newCollectionForm.value).subscribe(
+      () => {
+        this.loadCollections();
+        this.newCollectionForm.reset();
+      },
+      (error) => {
+        console.error('Error adding collection:', error);
+      }
+    );
+  }
 
-playVideo(video: any) {
-  const videoElement = this.videoPlayer.nativeElement as HTMLVideoElement;
-  videoElement.src = video.src;
-  videoElement.play();
-}
+  updateCollection(id: number) {
+    this.collectionService.updateCollection(id, this.updatedCollectionForm.value).subscribe(
+      () => {
+        this.loadCollections();
+        this.updatedCollectionForm.reset();
+      },
+      (error) => {
+        console.error('Error updating collection:', error);
+      }
+    );
+  }
 
-pauseVideo(video: any) {
-  const videoElement = this.videoPlayer.nativeElement as HTMLVideoElement;
-  videoElement.pause();
-}
+  deleteCollection(id: number) {
+    this.collectionService.deleteCollection(id).subscribe(
+      () => {
+        this.loadCollections();
+      },
+      (error) => {
+        console.error('Error deleting collection:', error);
+      }
+    );
+  }
+
+  addTableauToCollection(collectionId: number) {
+    this.collectionService.addTableauToCollection(collectionId, this.newTableauForm.value).subscribe(
+      () => {
+        this.loadCollections();
+        this.newTableauForm.reset();
+      },
+      (error) => {
+        console.error('Error adding tableau to collection:', error);
+      }
+    );
+  } 
+  deleteTableau(tableauId: number) {
+    this.tableauService.deleteTableau(tableauId).subscribe(
+      () => {
+        this.loadTableaux();
+        // Vous pouvez également ajouter une logique pour mettre à jour les collections
+      },
+      (error) => {
+        console.error('Error deleting tableau:', error);
+      }
+    );
+  }
 }

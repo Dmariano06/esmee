@@ -8,6 +8,7 @@ import { TestComponent } from './test/test.component';
 const routes: Routes = [
   {path:"home", component: HomeComponent},
   {path:"tableaux", component: TableauxComponent},
+  {path:"collections", component: CollectionsComponent},
   {path: '', redirectTo:"home", pathMatch: 'full'}
 ];
 

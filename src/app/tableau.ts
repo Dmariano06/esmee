@@ -5,4 +5,5 @@ export class Tableau {
     description?: string;
     prix?: number;
    image?: string;
+   taille?: string;
 }

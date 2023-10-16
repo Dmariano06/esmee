@@ -9,7 +9,7 @@ import { CarouselComponent } from './carousel/carousel.component';
 import { PresentationComponent } from './presentation/presentation.component';
 import { TableauxComponent } from './tableaux/tableaux.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollectionsComponent } from './collections/collections.component';
 
 
@@ -27,7 +27,8 @@ import { CollectionsComponent } from './collections/collections.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule, 
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

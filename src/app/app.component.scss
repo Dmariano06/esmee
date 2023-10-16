@@ -1,9 +1,4 @@
 
-
-/*@font-face{
-    font-family: Avenir;
-    src: url(../assets/AvenirLTStd-Black.otf) format('truetype');
-}*/
 body{
     overflow: hidden ;
     background:#0f2c3f;
@@ -13,6 +8,9 @@ nav{
     transition:all  0.3s ease-in-out; 
     .dropdown-item:hover{
         color:#0a1c29;
+    }
+    .dropdown-menu{
+        background-color: #0a1c29;
     }
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
     background: #0a1c29;
@@ -66,4 +64,13 @@ a{color: white;
 .scrolled1 {
     background-color: purple;
     transition:all  0.3s ease-in-out; /* Couleur de fond lorsque défilé */
+  }
+  #lune{
+    background-color:purple ;
+  }
+  #terre{
+    background-color: brown;
+  }
+  #bleu{
+    background-color: #5092be;
   }

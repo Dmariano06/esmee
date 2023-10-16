@@ -19,7 +19,7 @@ export class TableauService {
   getScrollTrigger() {
     return this.scrollTrigger.asObservable();
   }
-  private apiUrl = 'https://backend-web-service-8mf2.onrender.com/tableau';
+ private apiUrl = 'https://backend-web-service-8mf2.onrender.com/api/tableaux';
 
   constructor(private http: HttpClient) { }
 
@@ -28,7 +28,16 @@ export class TableauService {
   }
   
   addTableau(tableau: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl, tableau);
+    return this.http.post<any>(`${this.apiUrl}`, tableau);
+  }
+  
+
+  getTableaux(): Observable<any> {
+    return this.http.get(`${this.apiUrl}`);
+  }
+
+  saveTableau(tableau: any): Observable<any> {
+    return this.http.post(`${this.apiUrl}`, tableau);
   }
 
   updateTableau(tableauId: number, tableau: any): Observable<any> {

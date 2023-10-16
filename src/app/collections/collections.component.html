@@ -1,7 +1,11 @@
 <body>
-  <h2>{{ tableau.nom }}</h2>
-  <p>{{ tableau.description }}</p>
-  <div *ngFor="let image of tableau.images">
-    <img [src]="tableau.image" alt="{{ image.alt }}" />
-  </div>
+  <h1 class="text-center">MA LISTE</h1>
+    <h2>Tableaux</h2>
+    <ul>
+      <li *ngFor="let tableau of tableaux">
+        {{ tableau.nom }}
+        <button (click)="deleteTableau(tableau.id)">Supprimer</button>
+        <a [routerLink]="['/tableaux', tableau.id]">Détails</a>
+      </li>
+    </ul>
   </body>
