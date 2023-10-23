@@ -1,16 +1,14 @@
-import { Component,OnInit} from '@angular/core';
-import { TableauService } from '../tableau.service';
+import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CollectionService } from '../collection.service';
-import { Tableau } from '../tableau';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { TableauService } from '../tableau.service';
 
 @Component({
-  selector: 'app-tableaux',
-  templateUrl: './tableaux.component.html',
-  styleUrls: ['./tableaux.component.scss']
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss']
 })
-export class TableauxComponent implements OnInit {
+export class DashboardComponent {
   tableaux: any[] = [];
   collections: any[] = [];
   newCollectionForm: FormGroup;

@@ -1,32 +1,97 @@
 
 body{
-    color: white;
-    background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
+  color:#444;
+    //background-image: linear-gradient(to bottom, rgb(16, 47, 68) 0%, #000000 100%);
     padding-top: 5%;
+    background: rgb(255, 255, 255);
+    overflow: hidden;
 }
 h1{text-align: center;}
-
-form{
-  display: grid;
-  padding: 1%;
-border: 3px solid white;
-  width: 30%;
-  margin-bottom: 2%;
+hr{
+  border: 3px solid #0c2638;
 }
 
 img{
-  height: 332px;
+  height: 352px;
   width: 208px;
 }
 h1{
   background: white;
-  color:rgb(16, 47, 68) ;
+  font-weight: bold;
+  color:rgb(16, 47, 68);
 }
 ul{
-  width: 50%;
-  display: flex;
+  display: grid;
+}
+button{
+  background: black;
+  color:#f5f1f1;
+  transition: all 0.3s ease-in-out;
+}
+button:hover{
+  background: rgb(100, 99, 99);
+  color:#f5f1f1;
+  transition: all 0.3s ease-in-out;
 }
 h2{
-  background: rgb(216, 214, 214);
-  color:rgb(26, 73, 104) ;
+  font-weight: bold;
+  font-size: 38px;
+  color:#f5f1f1;
+  button{
+  margin-left: 50%;
+  }
+}
+.carte{
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  padding:1%;
+  border: 3px solid rgb(27, 84, 122);
+  
+}
+.item{display: flex;
+padding: 3%;}
+
+.carte:hover{transform: scale(1.05);
+transition: all 0.3s ease-in-out;}
+li{
+  display: grid;
+  margin: 1%;
+}
+.bleu-profond {
+  h2{
+     background-image: linear-gradient(160deg, rgba(16, 47, 68,0.8) 0%,rgba(231,223,223,0.6) 74%, rgba(237,232,237,0.3) 100%);
+  }
+}
+
+.lune-spectrale {
+  img{
+    width: 332px;
+    height: 208px;
+  }
+  hr{
+    border: 3px solid #7b1583cc;
+  }
+  .carte{
+    border: 3px solid purple;
+    }
+    h2{
+      background: linear-gradient(160deg, #7b1583cc 0%, rgba(231,223,223,0.6) 74%, rgba(237,232,237,0.3) 100%);
+    }
+}
+.terre-bruler{
+  hr{
+    border: 3px solid #a52a2acc;
+  }
+  h2{
+    background: linear-gradient(160deg, #a52a2acc 0%, rgba(231,223,223,0.6) 74%, rgba(237,232,237,0.3) 100%);
+  }
+  .carte{
+  border: 3px solid brown;
+  }
+
+  img{
+    width: 332px;
+    height: 208px;
+  }
 }

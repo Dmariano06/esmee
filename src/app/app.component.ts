@@ -1,6 +1,7 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { TableauService } from './tableau.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -18,13 +19,14 @@ export class AppComponent {
       .subscribe((trigger) => {
         this.isScrolled = trigger;
       });
+      
   }
 
   ngOnDestroy() {
     this.scrollSubscription!.unsubscribe();
   }
   title = 'esme';
-  constructor(private renderer: Renderer2, private el: ElementRef, private tableauService: TableauService) {}
+  constructor(private renderer: Renderer2, private el: ElementRef, private tableauService: TableauService, private router: Router) {}
 
   scrollToComponentB() {
     const componentB = this.el.nativeElement.querySelector('#presentation');
@@ -41,5 +43,8 @@ export class AppComponent {
   scrollToDesert() {
     const desert = this.el.nativeElement.querySelector('#hor');
     desert.scrollIntoView({ behavior: 'smooth' });
+  }
+  routerNavigate(){
+    this.router.navigateByUrl('/tableaux');
   }
 }

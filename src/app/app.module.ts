@@ -11,6 +11,10 @@ import { TableauxComponent } from './tableaux/tableaux.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CollectionsComponent } from './collections/collections.component';
+import { LoginComponent } from './login/login.component';
+import { RegsiterComponent } from './regsiter/regsiter.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClientsComponent } from './clients/clients.component';
 
 
 @NgModule({
@@ -21,7 +25,11 @@ import { CollectionsComponent } from './collections/collections.component';
     CarouselComponent,
     PresentationComponent,
     TableauxComponent,
-    CollectionsComponent
+    CollectionsComponent,
+    LoginComponent,
+    RegsiterComponent,
+    DashboardComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

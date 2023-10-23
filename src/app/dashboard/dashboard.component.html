@@ -1,0 +1,48 @@
+<body>
+    <h1>DASHBOARD</h1>
+    <app-tableaux></app-tableaux>
+        <div class="interface">
+        <div>
+          <form [formGroup]="newCollectionForm" (ngSubmit)="addCollection()">
+            <h2>Ajouter une nouvelle collection</h2>
+            <label>Nom: </label>
+            <input formControlName="nom" />
+            <label>Description: </label>
+            <input formControlName="description" />
+            <button type="submit">Ajouter</button>
+          </form>
+        </div>
+        
+      
+        <div *ngFor="let collection of collections">
+          <div>
+            <form [formGroup]="updatedCollectionForm" (ngSubmit)="updateCollection(collection.id)">
+              <h3>{{ collection.nom }}</h3>
+              <h4>Mettre à jour la collection</h4>
+              <label>Nouveau nom: </label>
+              <input formControlName="nom" />
+              <label>Nouvelle description: </label>
+              <input formControlName="description" />
+              <button type="submit">Mettre à jour</button>
+            </form>
+          </div>
+          <div>
+            <form [formGroup]="newTableauForm" (ngSubmit)="addTableauToCollection(collection.id)">
+              <h4>Ajouter un tableau</h4>
+              <label>Nom du tableau: </label>
+              <input formControlName="nom" />
+              <label>Description: </label>
+              <input formControlName="description" />
+              <label>Prix: </label>
+              <input formControlName="prix" />
+              <label>Taille: </label>
+              <input formControlName="taille" />
+              <label>Image: </label>
+              <input formControlName="image" />
+              <button type="submit">Ajouter le tableau</button>
+            </form>
+          </div>
+        </div>
+        </div>
+        <app-clients></app-clients>
+      </body>
